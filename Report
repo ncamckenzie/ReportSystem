@@ -1,19 +1,25 @@
+import database.java
+import java.util.Date;
+
+
 public class Report {
-    private int BudgetDistribution
-    private String ProductDisstribution
-    private int TotalApplicationsRecived
-    private int Applications Approved
-    private double TotalCashDonation
-    private int TotalGoodsDonation
-    private periodical Periodial   
-    private float ApprocalRate
+    private int BudgetDistribution;
+    private String ProductDisstribution;
+    private int TotalApplicationsRecived;
+    private int Applications Approved;
+    private double TotalCashDonation;
+    private int TotalGoodsDonation;
+    private periodical Periodial   ;
+    private float ApprocalRate;
         
         
      /**
      * Default constructor
      */
     public Report() {
-        this.BudgetDistribution=
+        Date currentdate = new Date(); 
+        this.BudgetDistribution = database.TotalBudgetDistributiontoTheCurrentDate
+        this.ProductDisstribution = database.TotalProductDistributiontoTheCurrentDate
         
  } 
     public void printReport();
