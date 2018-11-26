@@ -1,0 +1,29 @@
+import java.io.*;
+
+public class ReportTest {
+
+  public static void main(String args[]){
+     Report report1 = new Report();
+     Report report2 = new Report();
+     
+     report1.addBudgetDistribution(monthly);
+     report1.addProductDistribution(monthly);
+     report1.addTotalApplicationsReceived(monthly);
+     report1.addTotalApplicationsApproved(monthly);
+     report1.addTotalCashDonations(monthly);
+     report1.addTotalGoodsDonations(monthly);
+     report1.addPeriodial(monthly);
+     report1.addApprovalRate(monthly);
+     report1.printReport();
+     
+     report2.addBudgetDistribution(bi-annually);
+     report2.addProductDistribution(bi-annually);
+     report2.addTotalApplicationsReceived(bi-annually);
+     report2.addTotalApplicationsApproved(bi-annually);
+     report2.addTotalCashDonations(bi-annually);
+     report2.addTotalGoodsDonations(bi-annually);
+     report2.addPeriodial(bi-annually);
+     report2.addApprovalRate(bi-annually);
+     report2.printReport();
+    }
+}
