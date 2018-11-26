@@ -17,16 +17,27 @@ public class Report {
      * Default constructor
      */
     public Report() {
-        Date currentdate = new Date(); 
-        this.BudgetDistribution = database.TotalBudgetDistributiontoTheCurrentDate;
+        this.BudgetDistribution = database.getBudget;
         this.ProductDisstribution = database.TotalProductDistributiontoTheCurrentDate;
         this.ApplicationsApproved = database.ApplicationsApprovedtoTheCurrentDate;
         this.TotalCashDonation = database.TotalCashDonationtoTheCurrentDate;
         this.TotalGoodsDonation = database.TotalGoodsDonationtoTheCurrentDate;
         
         
+        }
+    public int getBudgetDistribution() {
+        Date currentdate = new Date();         
+        
+    
+        
+        
  } 
-    public void printReport();
+    public  void printReport();
         System.out.println("Budget Distribution:" + BudgetDistribution )
         System.out.println("Product Distribution:" + Product Distribution )
+        System.out.println()
+        System.out.println()
+        System.out.println()
+        System.out.println()
+        System.out.println()
 }
