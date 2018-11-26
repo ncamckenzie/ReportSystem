@@ -10,7 +10,7 @@ public class Report {
     private double TotalCashDonation;
     private int TotalGoodsDonation;
     private periodical Periodial   ;
-    private float ApprocalRate;
+    private float ApprovalRate;
         
         
      /**
