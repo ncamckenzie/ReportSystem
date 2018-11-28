@@ -22,22 +22,20 @@ public class Report {
         this.ApplicationsApproved = database.ApplicationsApprovedtoTheCurrentDate;
         this.TotalCashDonation = database.TotalCashDonationtoTheCurrentDate;
         this.TotalGoodsDonation = database.TotalGoodsDonationtoTheCurrentDate;
+        this.ApprovalRate = database.CalculateApprovalRate;
         
-        
-        }
-    public int getBudgetDistribution() {
-        Date currentdate = new Date();         
+        }     
         
     
         
         
  } 
-    public  void printReport();
+    public void printReport();
         System.out.println("Budget Distribution:" + BudgetDistribution )
-        System.out.println("Product Distribution:" + Product Distribution )
-        System.out.println()
-        System.out.println()
-        System.out.println()
-        System.out.println()
-        System.out.println()
+        System.out.println("Product Distribution:" + ProductDistribution )
+        System.out.println("Total Applications Received:" + Product Distribution)
+        System.out.println("Applications Approved:" + Applications)
+        System.out.println("Total Cash Donation:" + TotalCashDonation)
+        System.out.println("Total Goods Donation:" + TotalGoodsDonation)
+        System.out.println("Approval Rate:" + ApprovalRate)
 }
