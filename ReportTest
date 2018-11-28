@@ -3,8 +3,8 @@ import java.io.*;
 public class ReportTest {
 
   public static void main(String args[]){
-     Report report1 = new Report("monthly");
-     Report report2 = new Report("bi-annually");
+     Report report1 = new Report("month");
+     Report report2 = new Report("bi-annual");
 
      report1.printReport();
      report2.printReport();
