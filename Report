@@ -9,20 +9,22 @@ public class Report {
     private int ApplicationsApproved;
     private double TotalCashDonation;
     private int TotalGoodsDonation;
-    private periodical Periodial   ;
+    private String Period   ;
     private float ApprovalRate;
         
         
      /**
      * Default constructor
      */
-    public Report() {
-        this.BudgetDistribution = database.getBudget;
-        this.ProductDisstribution = database.TotalProductDistributiontoTheCurrentDate;
-        this.ApplicationsApproved = database.ApplicationsApprovedtoTheCurrentDate;
-        this.TotalCashDonation = database.TotalCashDonationtoTheCurrentDate;
-        this.TotalGoodsDonation = database.TotalGoodsDonationtoTheCurrentDate;
-        this.ApprovalRate = database.CalculateApprovalRate;
+    public Report(String p) {
+        this.Period = p;
+        this.BudgetDistribution = database.getBudgetDistribution(p);
+        this.ProductDisstribution = database.getProductDistribution(p);
+        this.TotalApplicationsReceived = database.getTotalApplicationsReceived(p);
+        this.ApplicationsApproved = database.getApplicationsApproved(p);
+        this.TotalCashDonation = database.getTotalCashDonation(p);
+        this.TotalGoodsDonation = database.getTotalGoodsDonationt(p);
+        this.ApprovalRate = database.CalculateApprovalRate();
         
         }     
         
@@ -31,11 +33,20 @@ public class Report {
         
  } 
     public void printReport();
-        System.out.println("Budget Distribution:" + BudgetDistribution )
-        System.out.println("Product Distribution:" + ProductDistribution )
-        System.out.println("Total Applications Received:" + Product Distribution)
-        System.out.println("Applications Approved:" + Applications)
-        System.out.println("Total Cash Donation:" + TotalCashDonation)
-        System.out.println("Total Goods Donation:" + TotalGoodsDonation)
-        System.out.println("Approval Rate:" + ApprovalRate)
+        if (Period = "month") {
+           System.out.println("For this month,");
+           }
+        else if (Period = "bi-annual") {
+           System.out.println("For the first 6 months,");
+           }
+        else if (Period = "annual") {
+           System.out.println("For this year,");
+           }
+        System.out.println("Budget Distribution:" + BudgetDistribution );
+        System.out.println("Product Distribution:" + ProductDistribution );
+        System.out.println("Total Applications Received:" + TotalApplicationsRecieved;
+        System.out.println("Applications Approved:" + ApplicationsApproved);
+        System.out.println("Total Cash Donation:" + TotalCashDonation);
+        System.out.println("Total Goods Donation:" + TotalGoodsDonation);
+        System.out.println("Approval Rate:" + ApprovalRate);
 }
