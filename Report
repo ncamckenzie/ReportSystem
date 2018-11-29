@@ -18,17 +18,19 @@ public class Report {
      */
     public Report(String p) {
         this.Period = p;
-        this.BudgetDistribution = database.getBudgetDistribution(p);
-        this.ProductDisstribution = database.getProductDistribution(p);
-        this.TotalApplicationsReceived = database.getTotalApplicationsReceived(p);
-        this.ApplicationsApproved = database.getApplicationsApproved(p);
-        this.TotalCashDonation = database.getTotalCashDonation(p);
-        this.TotalGoodsDonation = database.getTotalGoodsDonationt(p);
-        this.ApprovalRate = database.CalculateApprovalRate();
+        this.BudgetDistribution = DatabaseArray.getBudgetDistribution(p);
+        this.ProductDisstribution = DatabaseArray.getProductDistribution(p);
+        this.TotalApplicationsReceived = DatabaseArray.getTotalApplicationsReceived(p);
+        this.ApplicationsApproved = DatabaseArray.getApplicationsApproved(p);
+        this.TotalCashDonation = DatabaseArray.getTotalCashDonation(p);
+        this.TotalGoodsDonation = DatabaseArray.getTotalGoodsDonationt(p);
+        this.ApprovalRate = DatabaseArray.CalculateApprovalRate();
         
         }     
         
-    
+    public void getTotalApplicationsReceived(String p) {
+        if (p = "monthly") {
+            return 
         
         
  } 
