@@ -1,0 +1,93 @@
+class DatabaseArray {
+    int [] BudgetDistributions = {10000, 60000, 100};
+    int [] ProductDistributions = {10000, 60000, 100};
+    int [] ApplicationsReceived = {10000, 60000, 100};
+    int [] ApplicationsApproved = {10000, 60000, 100};
+    int [] CashDonations = {10000, 60000, 100};
+    int [] GoodsDonations = {10000, 60000, 100};
+    
+    public int calcBD(int p) {
+	if (p == 0) {
+	   return BudgetDistributions[0];
+	} 
+	else if (p == 1) {
+	   return BudgetDistributions[1];
+	}
+	else if (p == 2) {
+	   return BudgetDistributions[2];
+	} 
+	else {
+	    return 0;
+	} 
+	}
+    public int calcPD(int p) {
+	if (p == 0) {
+	   return ProductDistributions[0];
+	} 
+	else if (p == 1) {
+	   return ProductDistributions[1];
+	}
+	else if (p == 2) {
+	   return ProductDistributions[2];
+	} 
+	else {
+	    return 0;
+	}
+ 	}
+     public int calcAR(int p) {
+	if (p == 0) {
+	   return ApplicationsReceived[0];
+	} 
+	else if (p == 1) {
+	   return ApplicationsReceived[1];
+	}
+	else if (p == 2) {
+	   return ApplicationsReceived[2];
+	} 
+	else {
+	    return 0;
+	}
+	} 	
+    public int calcAA(int p) {
+	if (p == 0) {
+	   return ApplicationsApproved[0];
+	} 
+	else if (p == 1) {
+	   return ApplicationsApproved[1];
+	}
+	else if (p == 2) {
+	   return ApplicationsApproved[2];
+	} 
+	else {
+	    return 0;
+	}
+	} 
+    public int calcCD(int p) {
+	if (p == 0) {
+	   return CashDonations[0];
+	} 
+	else if (p == 1) {
+	   return CashDonations[1];
+	}
+	else if (p == 2) {
+	   return CashDonations[2];
+	} 
+	else {
+	    return 0;
+	}
+	} 
+    public int calcGD(int p) {
+	if (p == 0) {
+	   return GoodsDonations[0];
+	} 
+	else if (p == 1) {
+	   return GoodsDonations[1];
+	}
+	else if (p == 2) {
+	   return GoodsDonations[2];
+	} 
+	else {
+	    return 0;
+	}
+	}
+} 
