@@ -1,12 +1,26 @@
 import java.io.*;
-
 public class ReportTest {
 
-  public static void main(String args[]){
-     Report report1 = new Report("month");
-     Report report2 = new Report("bi-annual");
+   public static void main(String args[]){ 
+      /* Create two Reports using constructor */
+      Report report1 = new Report(0);
+      Report report2 = new Report(1);
 
-     report1.printReport();
-     report2.printReport();
-    }
+      // Invoking methods for each object created
+     
+      report1.getBD(0);
+      report1.getPD(0);
+      report1.getAR(0);
+      report1.getAA(0);
+      report1.getCD(0);
+      report1.getGD(0);
+      report2.getBD(1);
+      report2.getPD(1);
+      report2.getAR(1);
+      report2.getAA(1);
+      report2.getCD(1);
+      report2.getGD(1);
+      report1.printReport();
+      report2.printReport();
+   }
 }
