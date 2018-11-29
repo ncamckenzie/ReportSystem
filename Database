@@ -1,0 +1,6 @@
+class DatabaseArray {
+   String [] Applications = { "Daniel", "Alex", "Ash"};
+   int [] Cash Donations = {10000, 60000, 100};
+   String [] Goods Donations = {"Rum", "20g of patties", "40g of bauxite"};
+   
+   }
