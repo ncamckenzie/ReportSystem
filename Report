@@ -1,56 +1,52 @@
-import database.java
-
-
+import java.io.*;
 public class Report {
+
     private int BudgetDistribution;
-    private String ProductDisstribution;
-    private int TotalApplicationsRecived;
+    private int ProductDistribution;
+    private int ApplicationsReceived;
     private int ApplicationsApproved;
-    private double TotalCashDonation;
+    private int TotalCashDonation;
     private int TotalGoodsDonation;
-    private String Period   ;
-    private float ApprovalRate;
-        
-        
-     /**
-     * Default constructor
-     */
-    public Report(String p) {
-        this.Period = p;
-        this.BudgetDistribution = DatabaseArray.getBudgetDistribution(p);
-        this.ProductDisstribution = DatabaseArray.getProductDistribution(p);
-        this.TotalApplicationsReceived = DatabaseArray.getTotalApplicationsReceived(p);
-        this.ApplicationsApproved = DatabaseArray.getApplicationsApproved(p);
-        this.TotalCashDonation = DatabaseArray.getTotalCashDonation(p);
-        this.TotalGoodsDonation = DatabaseArray.getTotalGoodsDonationt(p);
-        this.ApprovalRate = DatabaseArray.CalculateApprovalRate();
-        
-        }     
-        
-    public void getTotalApplicationsReceived(String p) {
-        if (p = "month") {
-            return Application[0];
-        else if (p = "bi-annual") {
-            return Application[1];
-        else if (p = "annual") {
-            return Application[2];
-        }
- } 
-    public void printReport();
-        if (Period = "month") {
-           System.out.println("For this month,");
-           }
-        else if (Period = "bi-annual") {
-           System.out.println("For the first 6 months,");
-           }
-        else if (Period = "annual") {
-           System.out.println("For this year,");
-           }
-        System.out.println("Budget Distribution:" + BudgetDistribution );
-        System.out.println("Product Distribution:" + ProductDistribution );
-        System.out.println("Total Applications Received:" + TotalApplicationsRecieved;
-        System.out.println("Applications Approved:" + ApplicationsApproved);
-        System.out.println("Total Cash Donation:" + TotalCashDonation);
-        System.out.println("Total Goods Donation:" + TotalGoodsDonation);
-        System.out.println("Approval Rate:" + ApprovalRate);
+    private int Period;
+    DatabaseArray a = new DatabaseArray();
+  
+
+   // This is the constructor of the class Report
+   public Report(int p) {
+      this.Period = p;
+   }
+
+   // Assign the budget distribution to the variable BudgetDistribution.
+   public void getBD(int p) {
+       BudgetDistribution = a.calcBD(p);
+   }
+
+   /* Assign the product distribution to the ProductDistribution.*/
+   public void getPD(int p) {
+      ProductDistribution = a.calcPD(p);
+   }
+
+   public void getAR(int p) {
+      ApplicationsReceived = a.calcAR(p);
+   }
+   public void getAA(int p) {
+      ApplicationsApproved = a.calcAA(p);
+   }
+   
+   public void getCD(int p) {
+      TotalCashDonation = a.calcCD(p);
+   }
+   public void getGD(int p) {
+      TotalGoodsDonation = a.calcGD(p);
+   }
+
+   /* Print the Report details */
+   public void printReport() {
+       System.out.println("Budget Distribution:" + BudgetDistribution );
+       System.out.println("Product Distribution:" + ProductDistribution );
+       System.out.println("Total Applications Received:" + ApplicationsReceived);
+       System.out.println("Applications Approved:" + ApplicationsApproved);
+       System.out.println("Total Cash Donation:" + TotalCashDonation);
+       System.out.println("Total Goods Donation:" + TotalGoodsDonation);
+   }
 }
